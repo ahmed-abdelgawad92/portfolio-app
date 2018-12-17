@@ -1,0 +1,9 @@
+<div>
+  <a href="http://clinic.ahmedelkayaty92.de">
+    <div class="mywork" alt="" [style.background]="'url(../../../'+work?.imgSrc+')'"></div>
+  </a>
+  <p class="mywork text-center">{{work?.projectName}} <span class="badge badge-light">{{work?.projectFilter|titlecase}}</span></p>
+  <p style="color:white" class="text-center">Skills Applied 
+    <span class="badge badge-light" *ngFor="let tag of work.tags">{{tag}}</span>  
+  </p>
+</div>

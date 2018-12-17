@@ -1,1 +1,363 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+a{
+  color: rgb(112, 200, 76);
+}
+a:hover{
+  color: rgb(75, 162, 75);
+  text-decoration: underline;
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+/************************HEADER**************************/
+.btn-green{
+  background: rgb(140, 249, 95);
+  border: 2px solid #e7e7e7!important;
+  color: #343a40!important;
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.btn-green:hover{
+  background: white;
+  transition: 1s all;
+}
+.home{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin: 230px 0 0 50px;
+  color: #000;
+}
+span.fullname{
+  font-size: 3.5rem;
+  color: rgb(75, 162, 75);
+}
+.quote,pre{
+  font-family:'Dancing Script', cursive;
+}
+pre{
+  font-size: 20px;
+  line-height: 1;
+  overflow: hidden !important;
+}
+section{
+  position: relative;
+  padding: 70px 0;
+}
+/***************************AboutMe*****************************/
+#aboutme,#certi{
+  background: whitesmoke;
+}
+div.heading{
+  text-align: center;
+  margin-bottom: 20px;
+}
+span.heading{
+  padding: 8px 8px 0 8px;
+  border-top: 4px solid rgb(140, 249, 95);
+  border-bottom: 4px solid rgb(140, 249, 95);
+  font-size: 3rem;
+}
+.blockquote{
+  margin:0 !important;
+}
+
+/***************************Mywork*****************************/
+#mywork{
+  background: url(assets/images/service-bg.jpg) no-repeat center top fixed;
+  background-size: cover;
+}
+#mywork span.heading{
+  color: white !important;
+  padding-bottom: 4px;
+}
+ul.tab li a{
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 2px 10px;
+}
+ul.tab li:first-of-type a{
+  border-left: 1px solid #fff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+ul.tab li:last-of-type a{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+ul.tab li.nav-item .active{
+  background: rgb(140, 249, 95)!important;
+  color: #010700;
+}
+div.mywork{
+  width: 100%;
+  padding-top:97%;
+  border: 5px solid #fff;
+  border-radius: 250px;
+  transition: 1s all;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+
+}
+div.mywork:hover{
+  opacity: 0.6;
+  border-color: rgb(140, 249, 95);
+  transition: 1s all;
+  transform: rotate(360deg);
+  transition: 1s all;
+}
+p.mywork{
+  margin-top: 10px;
+  color: whitesmoke;
+  font-size: 22px;
+}
+.display_video{
+  display: none;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 1000000;
+  background: #e7e7e788;
+}
+#play_video{
+  width: 100%;
+  display: none;
+  margin: 0 auto !important;
+}
+.bg-black{
+  position: relative;
+  width: 80%;
+  padding: 30px;
+  background: #343a40!important;
+  margin: 10px auto !important;
+  border-radius: 10px;
+}
+
+/***************************Contact*****************************/
+#contact{
+  background: url(assets/images/footer.png) no-repeat center top fixed;
+  background-size: cover;
+  min-height: 500px;
+}
+#contact span.heading{
+  color: white !important;
+  padding-bottom: 4px;
+}
+#contact blockquote p{
+  color: white !important;
+  font-size: 22px;
+}
+p.contact{
+  font-size: 25px;
+}
+img.contact{
+  width: 30px;
+}
+/*************************certification****************************/
+img.certi{
+  width:100%;
+  height: 100px;
+  border: 5px solid #e7e7e7;
+  border-radius: 5px;
+  transition: 1s all;
+}
+img.certi:hover{
+  opacity: 0.6;
+  transition: 1s all;
+  cursor: pointer;
+}
+#pdf{
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+  height: 1550px;
+  border: 5px solid #e7e7e7;
+  border-radius: 4px;
+}
+/*************************Footer****************************/
+.footer{
+  width: 100%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+/***************************CV*****************************/
+.my-50{
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+div.cv-left{
+  background: rgb(168, 187, 222);
+  /* rgb(40, 50, 70); */
+  min-height: 1000px!important;
+  padding-bottom: 20px;
+}
+.triangle{
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(-20deg);
+  border-top: 20px solid rgb(40, 50, 70);
+  position: relative;
+  top:-8px;
+  left: -13px;
+}
+img.cv-img{
+  display: block;
+  width: 75%;
+  margin: 30px auto;
+  border-radius: 250px;
+  border: 6px solid rgb(40, 50, 70);
+}
+.cv-head{
+  width: 70%;
+  margin: 20px auto;
+  background: rgb(40, 50, 70);
+  text-align: center;
+  padding: 10px;
+  color: whitesmoke;
+}
+div.cv-left-details{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.text-right{
+  text-align: right;
+}
+div.cv-left h2{
+  background: rgb(40, 50, 70);
+  margin: 20px -15px 0 -15px;
+  padding: 8px 0;
+}
+div.cv-left h2,div.cv-left h3{
+  text-align: center;
+  color: white;
+}
+.progress-bar{
+  background: rgb(40, 50, 70)!important;
+}
+.progress{
+  margin-top: 7px;
+}
+div.cv-right{
+  background: #e7e9f5;
+}
+.cv-section{
+  color: rgb(40, 50, 70);
+  padding: 20px;
+}
+.cv-section h3{
+  border-bottom: 2px solid rgb(40, 50, 70);
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+}
+.hint{
+  text-align: center;
+  color: grey;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.hobby{
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+/***************************Media queries*****************************/
+@media (max-width:995px) {
+  .home{
+    margin: 120px 0 0 30px;
+  }
+  span.fullname{
+    font-size: 1.5rem;
+  }
+  .quote,pre{
+    font-family:'Dancing Script', cursive;
+  }
+  pre{
+    font-size: 20px;
+  }
+  #photo{
+    margin-top:50px;
+  }
+}
+@media (max-width:750px) {
+  #photo{
+    margin-top:50px;
+  }
+  .home{
+    margin: 90px 0 0 20px;
+  }
+  .home h4{
+    font-size: 18px;
+  }
+  span.fullname{
+    font-size: 1.5rem;
+  }
+  .quote,pre{
+    font-family:'Dancing Script', cursive;
+  }
+  pre{
+    font-size: 14px;
+  }
+}
+@media (max-width:500px) {
+  #photo{
+    margin-top:70px;
+  }
+  .home{
+    margin: 90px 0 0 20px;
+  }
+  .home h4{
+    font-size: 14px;
+  }
+  span.fullname{
+    font-size: 1.2rem;
+  }
+  .quote,pre{
+    font-family:'Dancing Script', cursive;
+  }
+  pre{
+    font-size: 12px;
+  }
+}
+@media print{
+  #contact{
+    display: none;
+  }
+  #print{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+  .cv-left{
+    height: 100%;
+  }
+  .pl-30{
+    padding-left: 30px;
+  }
+}

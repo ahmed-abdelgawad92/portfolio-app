@@ -1,0 +1,24 @@
+<section id="mywork">
+  <div class="container">
+    <div class='heading'>
+      <span class="heading">My Work</span>
+    </div>
+    <ul class="nav justify-content-center tab">
+      <li class="nav-item">
+        <a class="nav-link active" data-project="all" href="#">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-project="laravel" href="#">Laravel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-project="php" href="#">PHP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-project="psdToHtml" href="#">PSD to HTML</a>
+      </li>
+    </ul>
+    <div class="row mt-3">
+      <app-work-item class="col-12 col-sm-6 col-md-4 projects"  *ngFor="let work of works" [work]="work"></app-work-item>
+    </div>
+  </div>
+</section>

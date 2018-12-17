@@ -1,0 +1,38 @@
+.navbar-brand{
+  /*font-family: 'Dancing Script', cursive;*/
+  line-height: 0.8;
+  max-width:150px;
+  color: rgb(140, 249, 95)!important;
+  padding: 0;
+}
+.navbar{
+    padding: .2rem 1rem;
+}
+.navbar-brand:hover{
+    cursor: pointer;
+}
+.brand-img{
+    display: inline-block;
+    width: 70px;
+}
+.navbar-brand span{
+   /* font-family: 'Dancing Script', cursive;*/
+   position: relative;
+   top: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -8px;
+}
+span.a{
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  float: left;
+  font-size: 3.5rem;
+  margin-right: -4px;
+}
+#nav-menu{
+  justify-content: flex-end;
+}
+li.nav-link>a.active{
+  color: rgb(140, 249, 95)!important;
+}
