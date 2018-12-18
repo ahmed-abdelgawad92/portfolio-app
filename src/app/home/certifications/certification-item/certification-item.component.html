@@ -1,3 +1,4 @@
-<p>
-  certification-item works!
-</p>
+<div>
+  <img [src]="certification?.imgSrc" class="certi" [ngClass]="{ default : certification?.letDefault}" alt="{{certification?.name}}">
+  <p class="text-center">{{certification?.name}}</p>
+</div>

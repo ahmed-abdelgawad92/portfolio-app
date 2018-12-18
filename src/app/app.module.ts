@@ -21,6 +21,9 @@ import { CvTimeHistoryComponent } from './cv/cv-time-history/cv-time-history.com
 import { CvTimeHistoryItemComponent } from './cv/cv-time-history/cv-time-history-item/cv-time-history-item.component';
 import { CvHobbysComponent } from './cv/cv-hobbys/cv-hobbys.component';
 import { CvHobbyItemComponent } from './cv/cv-hobbys/cv-hobby-item/cv-hobby-item.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeService } from './home.service';
 
 @NgModule({
   declarations: [
@@ -43,12 +46,16 @@ import { CvHobbyItemComponent } from './cv/cv-hobbys/cv-hobby-item/cv-hobby-item
     CvTimeHistoryComponent,
     CvTimeHistoryItemComponent,
     CvHobbysComponent,
-    CvHobbyItemComponent
+    CvHobbyItemComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    HomeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

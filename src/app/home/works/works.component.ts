@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Work } from './work.interface';
+import { Work } from './work.model';
 
 @Component({
   selector: 'app-works',
@@ -26,7 +26,8 @@ export class WorksComponent implements OnInit {
         ],
         'assets/images/presc.png',
         '#000059',
-        '100px 100px'
+        '100px 100px',
+        'center'
       ),
       new Work(
         'projects/movie.mp4',
@@ -41,21 +42,26 @@ export class WorksComponent implements OnInit {
           'PHP',
           'MySQL',
         ],
-        'assets/images/clinic.png'
+        'assets/images/clinic.png',
+        'rgb(164, 188, 213)',
+        '',
+        'center'
       ),
       new Work(
         'projects/egoist',
         'PSD to HTML',
         'Egoist',
         [],
-        'assets/images/Egoist.jpg',
+        'assets/images/Egoist.jpg'
       ),
       new Work(
         'projects/top_end',
         'PSD to HTML',
         'Top End',
         [],
-        'assets/images/top_end.png'
+        'assets/images/top_end.png',
+        '',
+        '100%'
       ),
       new Work(
         'projects/insight',

@@ -59,7 +59,7 @@ section{
 }
 div.heading{
   text-align: center;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
 }
 span.heading{
   padding: 8px 8px 0 8px;
@@ -106,7 +106,6 @@ div.mywork{
   border-radius: 250px;
   transition: 1s all;
   background-repeat: no-repeat !important;
-  background-position: center !important;
 
 }
 div.mywork:hover{

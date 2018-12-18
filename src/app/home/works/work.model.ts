@@ -6,7 +6,8 @@ export class Work{
         public tags: string[],
         public imgSrc: string,
         public backgroundColor: string = null,
-        public backgroundSize: string = null
+        public backgroundSize: string = null,
+        public backgroundPosition: string = null
     ){}
 
 }

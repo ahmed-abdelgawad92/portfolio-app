@@ -1,0 +1,9 @@
+div{
+    text-align: center;
+}
+.default{
+    width: 100px;
+    height: auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Work } from '../work.interface';
+import { Work } from '../work.model';
 
 @Component({
   selector: 'app-work-item',
