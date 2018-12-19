@@ -10,10 +10,10 @@ import { trigger, transition, query, style, animate, stagger, state } from '@ang
   animations: [
     trigger('photosAnimation', [
       transition('* => *', [
-        query('app-work-item', style({ transform: 'translateX(-100%)' })),
+        query('app-work-item', style({ opacity: 0 ,transform: 'translateX(-100%)' })),
         query('app-work-item',
           stagger('600ms', [
-            animate('600ms', style({ transform: 'translateX(0)' }))
+            animate('600ms', style({ opacity: 1,transform: 'translateX(0)' }))
           ]))
       ])
     ])

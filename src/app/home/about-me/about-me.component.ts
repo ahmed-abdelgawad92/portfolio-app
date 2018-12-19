@@ -31,14 +31,15 @@ export class AboutMeComponent implements OnInit {
   constructor(public el: ElementRef, private homeService: HomeService) { }
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop
-    const componentEndPosition = componentPosition + this.el.nativeElement.firstElementChild.offsetHeight;
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const elementHeight = this.el.nativeElement.firstElementChild.offsetHeight;
+    const componentEndPosition = componentPosition + elementHeight;
     const scrollPosition = window.pageYOffset;
     
     if (scrollPosition >= componentPosition && scrollPosition + 100 <= componentEndPosition) {
       this.homeService.scrollPosition.emit('aboutme');
     }
-    if (scrollPosition >= componentPosition - 300) {
+    if (scrollPosition + elementHeight >= componentPosition) {
       this.state = 'show'
     } else {
       this.state = 'hide'
