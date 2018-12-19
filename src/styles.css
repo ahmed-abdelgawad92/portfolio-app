@@ -104,6 +104,7 @@ div.mywork{
   padding-top:97%;
   border: 5px solid #fff;
   border-radius: 250px;
+  transition: 1s all;
   background-repeat: no-repeat !important;
 
 }
@@ -111,6 +112,7 @@ div.mywork:hover{
   opacity: 0.6;
   border-color: rgb(140, 249, 95);
   transform: rotate(360deg);
+  transition: 1s all;
 }
 p.mywork{
   margin-top: 10px;
