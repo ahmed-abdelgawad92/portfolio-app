@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Certification } from './certification.model';
+import { HomeService } from 'src/app/home.service';
 
 @Component({
   selector: 'app-certifications',
@@ -18,8 +19,17 @@ export class CertificationsComponent implements OnInit {
     new Certification('../../../../assets/images/deutsch.png','B1 Deutsch Zertifikat'),
     new Certification('../../../../assets/images/eingliederung.png','Eingliederungzuschuss für Arbeitgeber'),
   ];
-  constructor() { }
+  constructor(public el: ElementRef, private homeService: HomeService) { }
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop
+    const componentEndPosition = componentPosition + this.el.nativeElement.firstElementChild.offsetHeight;
+    const scrollPosition = window.pageYOffset;
 
+    if (scrollPosition >= componentPosition && scrollPosition + 70 <= componentEndPosition) {
+      this.homeService.scrollPosition.emit('certi');
+    }
+  }
   ngOnInit() {
   }
 

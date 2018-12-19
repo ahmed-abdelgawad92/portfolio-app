@@ -1,14 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { Work } from './work.model';
+import { HomeService } from 'src/app/home.service';
+import { trigger, transition, query, style, animate, stagger, state } from '@angular/animations';
 
 @Component({
   selector: 'app-works',
   templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css']
+  styleUrls: ['./works.component.css'],
+  animations: [
+    trigger('photosAnimation', [
+      transition('* => *', [
+        query('app-work-item', style({ transform: 'translateX(-100%)' })),
+        query('app-work-item',
+          stagger('600ms', [
+            animate('600ms', style({ transform: 'translateX(0)' }))
+          ]))
+      ])
+    ])
+  ]
 })
 export class WorksComponent implements OnInit {
   works: Work[];
-  constructor() {
+  constructor(public el: ElementRef, private homeService: HomeService) {
     this.works = [
       new Work(
          'http://clinic.ahmedelkayaty92.de',
@@ -86,7 +99,21 @@ export class WorksComponent implements OnInit {
       )
     ]
   }
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop
+    const componentEndPosition = componentPosition + this.el.nativeElement.firstElementChild.offsetHeight;
+    const scrollPosition = window.pageYOffset;
 
+    if (scrollPosition >= componentPosition && scrollPosition + 100 <= componentEndPosition) {
+      this.homeService.scrollPosition.emit('mywork');
+    }
+    /*if (scrollPosition >= componentPosition) {
+      this.state = 'show';
+    }else{
+      this.state = 'hide';
+    }*/
+  }
   ngOnInit() {
   }
 

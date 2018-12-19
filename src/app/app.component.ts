@@ -30,7 +30,6 @@ export class AppComponent implements OnInit{
     ).subscribe((event) => this.titleService.setTitle(event['title']));
     this.homeService.scrollEvent.subscribe(
       (id) => {
-        console.log(document.querySelector(id));
         try {
           let el = this.element.nativeElement.querySelector(id);
           el.scrollIntoView({ inline: "start", block: "start", behavior: "smooth" });

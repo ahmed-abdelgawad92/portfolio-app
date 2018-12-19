@@ -24,6 +24,7 @@ import { CvHobbyItemComponent } from './cv/cv-hobbys/cv-hobby-item/cv-hobby-item
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeService } from './home.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { HomeService } from './home.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     HomeService
