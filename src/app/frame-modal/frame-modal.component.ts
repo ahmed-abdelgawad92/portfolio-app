@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-frame-modal',
@@ -9,19 +10,24 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('displayContainer',[
       state('hide',style({ transform: 'translateY(-100%)'})),
       state('show', style({  transform: 'translateY(0)'})),
-      transition('* => *', animate('200ms'))
+      transition('* => *', animate('300ms'))
     ])
   ]
 })
 export class FrameModalComponent implements OnInit {
-  @Input() link: string = '../../assets/certification/bachelor.pdf';
-  @Input() state = 'show';
-  constructor() { }
+  link: string;
+  state = 'hide';
+  hide = true;
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    this.homeService.openModal.subscribe((link)=>{
+      this.link = link;
+      this.hide = false;
+      this.state = 'show';
+    });
   }
   close(){
     this.state='hide';
-    //this.hide = true;
   }
 }

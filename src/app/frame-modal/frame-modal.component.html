@@ -1,4 +1,4 @@
-<div class="frame-container" (click)="close()" [@displayContainer]="state">
+<div class="frame-container" [hidden]="hide" (click)="close()" [@displayContainer]="state">
   <div class="frame-content" frameborder="0" (click)="$event.stopPropagation()">
     <iframe [src]="link | safe"></iframe>
   </div>

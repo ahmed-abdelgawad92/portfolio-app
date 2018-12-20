@@ -1,4 +1,4 @@
 <div>
-  <img [src]="certification?.imgSrc" class="certi" [ngClass]="{ default : certification?.letDefault}" alt="{{certification?.name}}">
+  <img (click)="onOpen(certification?.link)" [src]="certification?.imgSrc" class="certi" [ngClass]="{ default : certification?.letDefault}" alt="{{certification?.name}}">
   <p class="text-center">{{certification?.name}}</p>
 </div>
