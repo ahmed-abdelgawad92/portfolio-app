@@ -39,7 +39,7 @@ export class AboutMeComponent implements OnInit {
     if (scrollPosition >= componentPosition && scrollPosition + 100 <= componentEndPosition) {
       this.homeService.scrollPosition.emit('aboutme');
     }
-    if (scrollPosition + elementHeight >= componentPosition) {
+    if (scrollPosition + 400 >= componentPosition) {
       this.state = 'show'
     } else {
       this.state = 'hide'

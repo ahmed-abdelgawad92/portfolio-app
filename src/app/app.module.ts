@@ -25,6 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeService } from './home.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FrameModalComponent } from './frame-modal/frame-modal.component';
+import { SafePipe } from './shared/safe-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CvTimeHistoryItemComponent,
     CvHobbysComponent,
     CvHobbyItemComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FrameModalComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
