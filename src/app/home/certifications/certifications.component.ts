@@ -1,13 +1,39 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Certification } from './certification.model';
 import { HomeService } from 'src/app/home.service';
+import { trigger, state, style, transition, animate, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-certifications',
   templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.css']
+  styleUrls: ['./certifications.component.css'],
+  animations: [
+    trigger('scaleItems',[
+      transition('hide => show',[
+        query('div',style({ opacity: 0, transform: 'scale(0)'})),
+        query('div',
+          stagger('100ms',[
+            animate('100ms', style({ opacity: 1, transform: 'scale(1)'}))
+          ])
+        )
+      ]),
+      transition('show => hide',[
+        query('div',
+          stagger('40ms',[
+            animate('40ms', style({ opacity: 0, transform: 'scale(0)'}))
+          ])
+        )
+      ])
+    ]),
+    trigger('showDiv',[
+      state('hide',style({ opacity: 0 })),
+      state('show',style({ opacity: 1 })),
+      transition('show => hide',animate('100ms 200ms'))
+    ])
+  ]
 })
 export class CertificationsComponent implements OnInit {
+  state = "hide";
   certifications = [
     new Certification ('../../../../assets/images/aua2.png','Bachelor Certification', '../../assets/certification/bachelor.pdf'),
     new Certification('../../../../assets/images/aua2.png','Bachelor Grades', '../../assets/certification/noten.pdf'),
@@ -28,6 +54,11 @@ export class CertificationsComponent implements OnInit {
 
     if (scrollPosition >= componentPosition && scrollPosition + 70 <= componentEndPosition) {
       this.homeService.scrollPosition.emit('certi');
+    }
+    if (scrollPosition + 300 >= componentPosition){
+      this.state = 'show';
+    }else{
+      this.state = 'hide';
     }
   }
   ngOnInit() {
