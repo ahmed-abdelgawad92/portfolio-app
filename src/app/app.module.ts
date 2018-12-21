@@ -27,6 +27,7 @@ import { HomeService } from './home.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrameModalComponent } from './frame-modal/frame-modal.component';
 import { SafePipe } from './shared/safe-pipe.pipe';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { SafePipe } from './shared/safe-pipe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [
     HomeService

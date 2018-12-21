@@ -12,8 +12,8 @@ import { trigger, state, style, transition, animate, query, stagger } from '@ang
       transition('hide => show',[
         query('div',style({ opacity: 0, transform: 'scale(0)'})),
         query('div',
-          stagger('100ms',[
-            animate('100ms', style({ opacity: 1, transform: 'scale(1)'}))
+          stagger('70ms',[
+            animate('70ms', style({ opacity: 1, transform: 'scale(1)'}))
           ])
         )
       ]),

@@ -11,13 +11,7 @@ import { HomeService } from '../home.service';
       state('hide',style({ transform: 'translateY(-100%)'})),
       state('show', style({  transform: 'translateY(0)'})),
       transition('hide => show', animate('300ms')),
-      transition('show => hide', animate('300ms 300ms'))
-    ]),
-    trigger('displayContent',[
-      state('hide',style({ opacity:0 ,transform: 'scale(0)'})),
-      state('show', style({  transform: 'scale(1)'})),
-      transition('hide => show', animate('100ms 500ms')),
-      transition('show => hide', animate('100ms')),
+      transition('show => hide', animate('300ms'))
     ])
   ]
 })
