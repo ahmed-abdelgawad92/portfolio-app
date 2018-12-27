@@ -1,3 +1,7 @@
-<p>
-  info-item works!
-</p>
+<div class="cv-left-details row">
+  <div class="col-3 text-right">
+    <span class="glyphicon glyphicon-{{info.icon}} mr-1"></span>
+  </div>
+  <div *ngIf="lang == 'de'" class="col-9" [innerHTML]="info.content_de"></div>
+  <div *ngIf="lang == 'en'" class="col-9" [innerHTML]="info.content_en ? info.content_en : info.content_de"></div>
+</div>

@@ -1,3 +1,5 @@
-<p>
-  cv-hobby-item works!
-</p>
+<div>
+  <img [src]="'../../../../assets/'+hobby?.imgSrc" class="hobby" [style.background]="hobby.content_de == 'Fußball'? 'white' : ''" alt="">
+  <p *ngIf="lang == 'de'" class="text-center" style="color:white">{{hobby.content_de}}</p>
+  <p *ngIf="lang == 'en'" class="text-center" style="color:white">{{hobby.content_en ? hobby.content_en : hobby.content_de}}</p>
+</div>

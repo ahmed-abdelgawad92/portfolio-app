@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CvService } from '../../cv.service';
 
 @Component({
   selector: 'app-cv-hobby-item',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-hobby-item.component.css']
 })
 export class CvHobbyItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() hobby;
+  lang = "de";
+  constructor(private cvService: CvService) { }
 
   ngOnInit() {
+    this.cvService.changeLangEvent.subscribe(
+      lang => {
+        this.lang = lang;
+      }
+    );
   }
 
 }

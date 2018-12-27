@@ -39,7 +39,7 @@ export class CertificationsComponent implements OnInit {
     new Certification('../../../../assets/images/aua2.png','Bachelor Grades', '../../assets/certification/noten.pdf'),
     new Certification('../../../../assets/images/anerkennung.png','Anerkannter Zeugnis', '../../assets/certification/anerkannte-zertifikat.pdf'),
     new Certification('../../../../assets/images/micro.png','Microsoft Web Development Certification', '../../assets/certification/microsoft.pdf'),
-    new Certification('../../../../assets/images/zend.png','Zend Certified Engineer', '../../assets/certification/zend_certification.png',true),
+    new Certification('../../../../assets/images/zend.png','Zend Certified Engineer', '../../assets/certification/zend_certification.pdf',true),
     new Certification('../../../../assets/images/cbw.png','CBW Zeugnis', '../../assets/certification/cbw_certification.pdf'),
     new Certification('../../../../assets/images/webmasters.png','Webmasters Europe Certified PHP Developer', '../../assets/certification/webmaster_php.pdf',true),
     new Certification('../../../../assets/images/deutsch.png','B1 Deutsch Zertifikat', '../../assets/certification/deutsch.pdf'),

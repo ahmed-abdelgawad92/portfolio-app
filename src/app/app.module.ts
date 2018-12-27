@@ -16,7 +16,7 @@ import { CvHeaderComponent } from './cv/cv-header/cv-header.component';
 import { CvPersonalInformationComponent } from './cv/cv-personal-information/cv-personal-information.component';
 import { InfoItemComponent } from './cv/cv-personal-information/info-item/info-item.component';
 import { CvSkillsComponent } from './cv/cv-skills/cv-skills.component';
-import { CvSkillItemComponent } from './cv/cv-skill-item/cv-skill-item.component';
+import { CvSkillItemComponent } from './cv/cv-skills/cv-skill-item/cv-skill-item.component';
 import { CvTimeHistoryComponent } from './cv/cv-time-history/cv-time-history.component';
 import { CvTimeHistoryItemComponent } from './cv/cv-time-history/cv-time-history-item/cv-time-history-item.component';
 import { CvHobbysComponent } from './cv/cv-hobbys/cv-hobbys.component';

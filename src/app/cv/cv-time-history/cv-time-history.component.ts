@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CvService } from '../cv.service';
 
 @Component({
   selector: 'app-cv-time-history',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-time-history.component.css']
 })
 export class CvTimeHistoryComponent implements OnInit {
-
-  constructor() { }
+  @Input() items;
+  lang = "de"; 
+  constructor(private cvService: CvService) { }
 
   ngOnInit() {
+    this.cvService.changeLangEvent.subscribe(
+      lang => {
+        this.lang = lang;
+      }
+    );
   }
 
 }

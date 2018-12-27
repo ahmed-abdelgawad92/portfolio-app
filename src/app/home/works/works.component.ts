@@ -45,6 +45,23 @@ export class WorksComponent implements OnInit {
   constructor(public el: ElementRef, private homeService: HomeService) {
     this.staticWorks = [
       new Work(
+         '#home',
+         'Angular 6',
+         'My Portfolio',
+         [
+          'HTML',
+          'CSS',
+          'Bootstrap',
+          'Javascript',
+          'TypeScript',
+          'Angular Animations'
+        ],
+        'assets/angular.png',
+        'rgb(51, 58, 65)',
+        '100px 100px',
+        'center'
+      ),
+      new Work(
          'http://clinic.ahmedelkayaty92.de',
          'Laravel',
          'Gad Dental Clinics',
@@ -64,7 +81,7 @@ export class WorksComponent implements OnInit {
         'center'
       ),
       new Work(
-        'projects/movie.mp4',
+        'http://projects.ahmedelkayaty92.de/movie.mp4',
         'PHP',
         'Graduation Project',
         [
@@ -82,14 +99,14 @@ export class WorksComponent implements OnInit {
         'center'
       ),
       new Work(
-        'projects/egoist',
+        'http://projects.ahmedelkayaty92.de/egoist',
         'PSD to HTML',
         'Egoist',
         [],
         'assets/images/Egoist.jpg'
       ),
       new Work(
-        'projects/top_end',
+        'http://projects.ahmedelkayaty92.de/top_end',
         'PSD to HTML',
         'Top End',
         [],
@@ -98,21 +115,21 @@ export class WorksComponent implements OnInit {
         '100%'
       ),
       new Work(
-        'projects/insight',
+        'http://projects.ahmedelkayaty92.de/insight/',
         'PSD to HTML',
         'Insight',
         [],
         'assets/images/original.png'
       ),
       new Work(
-        'projects/webington',
+        'http://projects.ahmedelkayaty92.de/webington/',
         'PSD to HTML',
         'Webington',
         [],
         'assets/images/webington.jpg'
       ),
       new Work(
-        'projects/Wedding',
+        'http://projects.ahmedelkayaty92.de/Wedding/',
         'PSD to HTML',
         'Wedding',
         [],

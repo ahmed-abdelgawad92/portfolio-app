@@ -1,3 +1,38 @@
-<div class="background">
-
+<div style="margin-top:100px!important" class="text-center">
+    <ul class="nav justify-content-center tab">
+        <li class="nav-item">
+            <a class="nav-link active" (click)="changeLang($event, 'de')" href="#">Deutsch</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="changeLang($event, 'en')" href="#">English</a>
+        </li>
+    </ul>
+</div>
+<main class="container my-3">
+    <div class="row" id="print">
+        <div class="col-12 col-sm-12 col-md-4 cv-left">
+            <img src="../../assets/images/cv_img.png" alt="" class="cv-img">
+            <app-cv-personal-information></app-cv-personal-information>
+            <h2><span class="glyphicon glyphicon-stats"></span> {{skillHeading}}</h2>
+            <div class="triangle"></div>
+            <app-cv-skills [skills]="cvService.langSkills"></app-cv-skills>
+            <app-cv-skills [skills]="cvService.otherSkills"></app-cv-skills>
+            <app-cv-hobbys [hobbies]="cvService.hobbies"></app-cv-hobbys>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 cv-right">
+            <app-cv-header></app-cv-header>
+            <app-cv-time-history [items]="cvService.jobItems"></app-cv-time-history>
+            <app-cv-time-history [items]="cvService.educationItems"></app-cv-time-history>
+            <p class="hint">
+                Tipp: im September 2019 bekomme ich den unbefristeten deutschen Aufenthalt <br>
+                Ein <a href="http://www.ahmedelkayaty92.de/certification/Eingliederung.pdf" target="_blank" style="color:rgb(50,100,130)">Eingliederungzuschuss</a>
+                vom Arbeitsamt, den vielleicht Arbeitgeber sich interessiert.
+            </p>
+        </div>
+    </div>
+</main>
+<div class="text-center">
+    <button class="btn btn-green" (click)="downloadPDF()">
+        Download My CV <span class="glyphicon glyphicon-download"></span>
+    </button>
 </div>

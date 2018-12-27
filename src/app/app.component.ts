@@ -33,8 +33,6 @@ export class AppComponent implements OnInit{
         case event instanceof NavigationEnd:
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
-          setTimeout(()=>{
-          },500)
           this.loading = false;
           break;
         }
@@ -61,18 +59,22 @@ export class AppComponent implements OnInit{
     //scroll to a specific element
     this.homeService.scrollEvent.subscribe(
       (id) => {
-        try {
-          let el = this.element.nativeElement.querySelector(id);
+        let el = this.element.nativeElement.querySelector(id);
+        if(el){
           el.scrollIntoView({ inline: "start", block: "start", behavior: "smooth" });
-        } catch (e) {
-          console.log(e);
+        }else{
+          setTimeout(()=>{
+            el = this.element.nativeElement.querySelector(id);
+            if (el) {
+              el.scrollIntoView({ inline: "start", block: "start", behavior: "smooth" });
+            }
+          },400);
         }
       }
     );
     //if no hash route , scroll to top
     this.activatedRoute.fragment.subscribe((fragment: string) => {
-      console.log("My hash fragment is here => ", fragment);
-      if(fragment === undefined){
+      if(!fragment){
         window.scrollTo(0,0);
       }
     })

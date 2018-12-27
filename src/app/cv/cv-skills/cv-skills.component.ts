@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CvService } from '../cv.service';
 
 @Component({
   selector: 'app-cv-skills',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-skills.component.css']
 })
 export class CvSkillsComponent implements OnInit {
-
-  constructor() { }
+  @Input() skills;
+  lang = "de";
+  constructor(private cvService: CvService) { }
 
   ngOnInit() {
+    this.cvService.changeLangEvent.subscribe(
+      (lang) => {
+        this.lang = lang;
+      }
+    );
   }
 
 }

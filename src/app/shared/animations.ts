@@ -37,15 +37,15 @@ export const slideInAnimation =
                 })
             ]),
             query(':enter', [
-                style({ right: '100%', height: '!'})
+                style({ right: '100%', height: '!', opacity: 0})
             ]),
             query(':leave', animateChild()),
             group([
                 query(':leave', [
-                    animate('100ms ease-out', style({ right: '-100%' }))
+                    animate('300ms', style({ right: '-100%' }))
                 ]),
                 query(':enter', [
-                    animate('100ms ease-out', style({ right: '0%' }))
+                    animate('300ms', style({ right: '0%', opacity: 1 }))
                 ])
             ]),
             query(':enter', animateChild()),

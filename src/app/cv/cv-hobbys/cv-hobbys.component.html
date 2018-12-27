@@ -1,3 +1,6 @@
-<p>
-  cv-hobbys works!
-</p>
+<h3 class="my-3"><span class="glyphicon glyphicon-heart"></span> {{title}}</h3>
+<div class="row">
+    <div class="col-4" *ngFor="let hobby of hobbies">
+        <app-cv-hobby-item [hobby]="hobby"></app-cv-hobby-item>
+    </div>
+</div>

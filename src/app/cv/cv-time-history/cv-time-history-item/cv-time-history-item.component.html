@@ -1,3 +1,30 @@
-<p>
-  cv-time-history-item works!
-</p>
+<div class="row mt-2" *ngIf="lang=='de'">
+  <div class="col-5">
+    <h4><span class="glyphicon glyphicon-calendar"></span> {{item.range_de}}</h4>
+  </div>
+  <div class="col-7">
+    <h4>{{item.title_de}}</h4>
+    <p class="link" [innerHTML]="item.content_de"></p>
+    <ul *ngIf="item.list">
+      <li *ngFor="let i of item.list">
+        <span *ngIf="!i.link">{{i.content_de}}</span>
+        <a *ngIf="i.link" class="link" href="{{i.link}}">{{i.content_de}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row mt-2" *ngIf="lang=='en'">
+  <div class="col-5">
+    <h4><span class="glyphicon glyphicon-calendar"></span> {{item.range_en}}</h4>
+  </div>
+  <div class="col-7">
+    <h4>{{item.title_en}}</h4>
+    <p class="link" [innerHTML]="item.content_en"></p>
+    <ul *ngIf="item.list">
+      <li *ngFor="let i of item.list">
+        <span *ngIf="!i.link">{{i.content_en}}</span>
+        <a *ngIf="i.link" href="{{i.link}}" class="link">{{i.content_en}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

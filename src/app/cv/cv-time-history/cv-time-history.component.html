@@ -1,3 +1,7 @@
-<p>
-  cv-time-history works!
-</p>
+<div class="cv-section">
+  <h3 *ngIf="lang == 'de'"><span class="glyphicon glyphicon-{{items.icon}}" style="top:3px!important"></span> {{items.title_de}}</h3>
+  <h3 *ngIf="lang == 'en'"><span class="glyphicon glyphicon-{{items.icon}}" style="top:3px!important"></span> {{items.title_en}}</h3>
+  <div *ngFor="let item of items.items">
+    <app-cv-time-history-item [item]="item"></app-cv-time-history-item>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="lang == 'de'" class="cv-left-details row">
+  <div class="col-3 pl-30">
+    {{skill.content_de}}
+  </div>
+  <div class="col-9">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" [style.width]="skill?.width" aria-valuenow="25" aria-valuemin="0"
+        aria-valuemax="100">{{skill.label_de}}</div>
+    </div>
+  </div>
+</div>
+<div *ngIf="lang == 'en'" class="cv-left-details row">
+  <div class="col-3 pl-30">
+    {{skill.content_en ? skill.content_en : skill.content_de}}
+  </div>
+  <div class="col-9">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" [style.width]="skill?.width" aria-valuenow="25" aria-valuemin="0"
+        aria-valuemax="100">{{skill.label_en}}</div>
+    </div>
+  </div>
+</div>

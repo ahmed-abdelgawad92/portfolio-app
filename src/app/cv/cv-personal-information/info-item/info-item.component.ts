@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Info } from '../info.model';
+import { CvService } from '../../cv.service';
 
 @Component({
   selector: 'app-info-item',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-item.component.css']
 })
 export class InfoItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() info: Info;
+  lang = "de";
+  constructor(private cvService: CvService) {}
 
   ngOnInit() {
+    this.cvService.changeLangEvent.subscribe(
+      (lang) => {
+        this.lang = lang;
+      }
+    );
   }
 
 }
