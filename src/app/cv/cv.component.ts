@@ -12,7 +12,7 @@ import * as html2canvas from 'html2canvas';
 })
 export class CvComponent implements OnInit {
   skillHeading = "Kenntnisse & Fähigkeiten";
-  constructor(private cvService: CvService, private el: ElementRef) { }
+  constructor(public cvService: CvService, private el: ElementRef) { }
   ngOnInit() {
     this.cvService.changeLangEvent.subscribe(
       (lang)=>{
