@@ -86,7 +86,7 @@ export class CvService{
                     {
                         content_de:'Webmasters Europe zertifizierter PHP-Entwickler',
                         content_en:'Webmasters Europe Certified PHP Developer',
-                        link: "/src/assets/certification/webmaster_php.pdf"
+                        link: "http://projects.ahmedelkayaty92.de/certification/webmaster_php.pdf"
                     },
                 ]
 
@@ -102,17 +102,17 @@ export class CvService{
                     {
                         content_de: 'Microsoftzertifizierung 70-480',
                         content_en: 'Microsoft Certification 70-480',
-                        link: '/src/assets/certification/microsoft.pdf'
+                        link: 'http://projects.ahmedelkayaty92.de/certification/microsoft.pdf'
                     },
                     {
                         content_de: 'Zend PHP-zertifizierung',
                         content_en: 'Zend PHP Certification',
-                        link: '/src/assets/certification/zend_certification.pdf'
+                        link: 'http://projects.ahmedelkayaty92.de/certification/zend_certification.pdf'
                     },
                     {
                         content_de: 'CBW Zeugnis',
                         content_en: 'CBW Certificate',
-                        link: '/src/assets/certification/cbw_certification.pdf'
+                        link: 'http://projects.ahmedelkayaty92.de/certification/cbw_certification.pdf'
                     },
                 ]
             },
@@ -121,8 +121,8 @@ export class CvService{
                 range_en: 'January 2018',
                 title_de: 'Deutsch B1 Prüfung bei IBH Hamburg',
                 title_en: 'German B1 exam at IBH Hamburg',
-                content_de: 'am 27 Januar habe ich die B1 Prüfung und mit 98.8% bestanden. <a href="/src/assets/certification/deutsch.pdf" target="_blank" style="color:rgb(50,100,130)"> Hier klicken für Zertifikat</a>',
-                content_en: 'on January 27 I passed the B1 exam with 98.8%. <a href="/src/assets/certification/deutsch.pdf" target="_blank" [style]="color:rgb(50,100,130)"> Click here for certificate</a>'
+                content_de: 'am 27 Januar habe ich die B1 Prüfung und mit 98.8% bestanden. <a href="http://projects.ahmedelkayaty92.de/certification/deutsch.pdf" target="_blank" style="color:rgb(50,100,130)"> Hier klicken für Zertifikat</a>',
+                content_en: 'on January 27 I passed the B1 exam with 98.8%. <a href="http://projects.ahmedelkayaty92.de/certification/deutsch.pdf" target="_blank" [style]="color:rgb(50,100,130)"> Click here for certificate</a>'
             },
             {
                 range_de: 'November 2016 – April 2017',
