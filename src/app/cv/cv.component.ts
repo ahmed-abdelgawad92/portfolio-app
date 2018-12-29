@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { CvService } from './cv.service';
-import * as jsPDF from 'jspdf';
-import * as html2canvas from 'html2canvas';
+//import * as jsPDF from 'jspdf';
+//import * as html2canvas from 'html2canvas';
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
@@ -12,10 +12,12 @@ import * as html2canvas from 'html2canvas';
 })
 export class CvComponent implements OnInit {
   skillHeading = "Kenntnisse & Fähigkeiten";
+  lang = "de";
   constructor(public cvService: CvService, private el: ElementRef) { }
   ngOnInit() {
     this.cvService.changeLangEvent.subscribe(
       (lang)=>{
+        this.lang = lang;
         if(lang == "de"){
           this.skillHeading = "Kenntnisse & Fähigkeiten";
         }else{
@@ -32,6 +34,7 @@ export class CvComponent implements OnInit {
   }
 
   downloadPDF(){
+    //this.cvService.downloadCV(this.lang);
     /*let doc = new jsPDF();
     let specialElementHandlers = {
       '#editor': function(element, renderer){
@@ -44,7 +47,7 @@ export class CvComponent implements OnInit {
       'elementHandlers': specialElementHandlers
     });
     doc.save('test.pdf');*/
-    let cv = document.getElementById('print');
+    /*let cv = document.getElementById('print');
     html2canvas(cv, { scale: 4 }).then(canvas =>{
       const contentDataUrl = canvas.toDataURL('image/jpeg');
       let pdf = new jsPDF('p','px','a4');
@@ -53,6 +56,6 @@ export class CvComponent implements OnInit {
       console.log(pdf);
       pdf.addImage(contentDataUrl, 'PNG', 0, 0, width, height);
       pdf.save('ahmed_abdelgawad_cv.pdf');
-    });  
+    });  */
   }
 }

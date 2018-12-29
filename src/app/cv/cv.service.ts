@@ -1,6 +1,4 @@
 import { EventEmitter } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
 
 export class CvService{
     public changeLangEvent = new EventEmitter<string>();
@@ -191,7 +189,6 @@ export class CvService{
             },
         ]
     }
-
     /*changeLang(){
         if(this.lang=="de"){
             this.lang = "en";

@@ -32,7 +32,7 @@
     </div>
 </main>
 <div class="text-center">
-    <button class="btn btn-green" (click)="downloadPDF()">
+    <a class="btn btn-green" [href]="'http://localhost:8888/download_pdf/download_cv.php?lang=' + lang">
         Download My CV <span class="glyphicon glyphicon-download"></span>
-    </button>
+    </a>
 </div>
