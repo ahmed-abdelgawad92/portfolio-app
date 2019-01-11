@@ -47,5 +47,8 @@ export class AboutMeComponent implements OnInit {
   }
   ngOnInit() {
   }
+  clearActive(){
+    document.querySelector('a.active').classList.remove('active');
+  }
 
 }
